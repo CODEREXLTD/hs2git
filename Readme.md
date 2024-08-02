@@ -4,12 +4,14 @@
 ```
 npm install
 ```
-### Place Github Access key
-Go to ```utils/githubApi.js``` and place the API key 
 
-### Place HelpScout Access key
-Go to ```utils/helpscoutApi.js``` and place the API key 
+### Configure API Keys:
 
+#### GitHub Access Key:
+Open ```utils/githubApi.js``` and place your GitHub API key.
+
+#### HelpScout Access Key:
+Open ```utils/helpscoutApi.js``` and place your HelpScout API key.
 
 ### Start the app
 ```
