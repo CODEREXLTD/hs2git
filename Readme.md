@@ -19,7 +19,7 @@ npm start
 ```
 
 ## Mapping HelpScout Inbox IDs to GitHub Repositories
-Create a mapping file (utils/inboxRepoMapping.js) to associate HelpScout inbox IDs with GitHub repositories and tags. Here is an example mapping file:
+Go to file (utils/inboxRepoMapping.js) to associate HelpScout inbox IDs with GitHub repositories and tags. Here is an example mapping file:
 
 ```
 const inboxRepoMapping = {
