@@ -5,6 +5,8 @@ const handleGitHubWebhook = async (req, res) => {
   const { number: issueNumber, state } = data.issue;
   const { full_name: repo } = data.repository;
 
+  console.log(data)
+
   // Implement logic to retrieve HelpScout conversation ID from saved mapping
   const conversationId = getConversationIdFromIssueNumber(issueNumber);
 

@@ -1,6 +1,6 @@
 const axios = require('axios');
 
-const githubToken = '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';
+const githubToken = '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';
 const githubBaseUrl = 'https://api.github.com';
 
 const githubHeaders = {
