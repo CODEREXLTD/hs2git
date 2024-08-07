@@ -4,7 +4,8 @@
     "main": "app.js",
     "scripts": {
       "start": "node app.js",
-       "build": "netlify deploy --prod"
+      "build": "netlify build",
+       "deploy": "netlify deploy --prod"
     },
     "dependencies": {
         "axios": "^0.21.1",
