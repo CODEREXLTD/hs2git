@@ -1,6 +1,6 @@
 const axios = require('axios');
 
-const githubToken = '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';
+const githubToken = process.env.GITHUB_TOKEN;
 const githubBaseUrl = 'https://api.github.com';
 
 const githubHeaders = {
@@ -8,13 +8,23 @@ const githubHeaders = {
 };
 
 const createGitHubIssue = async (repo, title, body) => {
-  const response = await axios.post(`${githubBaseUrl}/repos/${repo}/issues`, { title, body }, { headers: githubHeaders });
-  return response.data;
+  try {
+    const response = await axios.post(`${githubBaseUrl}/repos/${repo}/issues`, { title, body }, { headers: githubHeaders });
+    return response.data;
+  } catch (error) {
+    console.error(`Error creating GitHub issue: ${error.message}`);
+    throw error;
+  }
 };
 
 const updateGitHubIssueState = async (repo, issueNumber, state) => {
-  const response = await axios.patch(`${githubBaseUrl}/repos/${repo}/issues/${issueNumber}`, { state }, { headers: githubHeaders });
-  return response.data;
+  try {
+    const response = await axios.patch(`${githubBaseUrl}/repos/${repo}/issues/${issueNumber}`, { state }, { headers: githubHeaders });
+    return response.data;
+  } catch (error) {
+    console.error(`Error updating GitHub issue state: ${error.message}`);
+    throw error;
+  }
 };
 
 module.exports = {

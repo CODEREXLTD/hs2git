@@ -1,7 +1,9 @@
+require('dotenv').config();
+
 const express = require('express');
 const bodyParser = require('body-parser');
-const { handleHelpScoutWebhook } = require('../controllers/helpscoutController');
-const { handleGitHubWebhook } = require('../controllers/githubController');
+const { handleHelpScoutWebhook } = require('./controllers/helpscoutController');
+const { handleGitHubWebhook } = require('./controllers/githubController');
 
 const app = express();
 
