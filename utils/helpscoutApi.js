@@ -8,6 +8,14 @@ const helpscoutHeaders = {
 };
 
 const getHelpScoutTicket = async (conversationId) => {
+
+  if (conversationId === 'mock') {
+    return {
+      subject: 'Mock Ticket Title',
+      body: 'This is a mock ticket body for testing purposes.'
+    };
+  }
+
   try {
     const response = await axios.get(`${helpscoutBaseUrl}/conversations/${conversationId}`, { headers: helpscoutHeaders });
     return response.data;

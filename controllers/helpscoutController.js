@@ -38,6 +38,7 @@ const handleHelpScoutWebhook = async (req, res) => {
       
       res.json({ status: 'success' });
     } catch (error) {
+      console.error('Error processing HelpScout webhook:', error);  // Log the error details
       res.status(500).json({ error: 'Internal Server Error' });
     }
   } else {
