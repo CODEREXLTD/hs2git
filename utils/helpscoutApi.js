@@ -1,4 +1,5 @@
 const axios = require('axios');
+const qs = require('qs');
 
 const helpscoutClientId = process.env.HELPSCOUT_CLIENT_ID;
 const helpscoutClientSecret = process.env.HELPSCOUT_CLIENT_SECRET;
