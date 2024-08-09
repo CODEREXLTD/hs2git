@@ -17,13 +17,15 @@ const determineRepo = (inboxId, tags) => {
 
 const handleHelpScoutWebhook = async (req, res) => {
   const data = req.body;
-  const { id: conversationId, status, mailboxId: inboxId, tags } = data;
+  // const { id: conversationId, status, mailboxId: inboxId, tags } = data;
+  const { id: conversationId, status, mailboxId: inboxId, tags, subject: title, preview: body } = data;
 
   const repo = determineRepo(inboxId, tags);
+  console.log('repo:', repo);
   if (repo) {
     try {
-      const ticketDetails = await getHelpScoutTicket(conversationId);
-      const { subject: title, body } = ticketDetails;
+      // const ticketDetails = await getHelpScoutTicket(conversationId);
+      // const { subject: title, body } = ticketDetails;
 
       const issue = await createGitHubIssue(repo, title, body);
       const issueNumber = issue.number;

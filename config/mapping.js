@@ -1,7 +1,7 @@
 const inboxRepoMapping = {
     'a20405536174aa76': [
       {
-        repo: 'CODEREXLTD/hs2git',
+        repo: 'iamsadi22/package',
         tags: ['bug', 'critical']
       }
     ],
